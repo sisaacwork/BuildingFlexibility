@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>London 100m+ Completion Timeline</title>
+    <title>London 75m+ Completion Timeline</title>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 <body>
-    <div id="container" style="width:100%; height:400px;"></div>
+    <div id="container" style="width:%; height:400px;"></div>
     <script>
         Highcharts.chart('container', {
             chart: {
@@ -27,12 +27,12 @@
             },
             yAxis: {
                 title: {
-                    text: 'Total number of 100m+ buildings'
+                    text: 'Total number of 75m+ buildings'
                 }
             },
             tooltip: {
                 pointFormat: '{series.name} had completed <b>{point.y:,.0f}</b><br/>' +
-                    '100m+ buildings'
+                    'm+ buildings'
             },
             plotOptions: {
                 area: {
