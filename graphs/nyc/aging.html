@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Aging Buildings</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+    <div id="container" style="width:100%; height:400px;"></div>
+    <script>
+        Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Proportion of 100m+ buildings over 40 years old',
+        align: 'center'
+    },
+    xAxis: {
+        categories: ['Now', 'by 2030', 'by 2040', 'by 2050', 'by 2060'],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        max: 100,
+        title: {
+            text: '% of buildings over 40 years old'
+        }
+    },
+    tooltip: {
+        valueSuffix: '%'
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [
+        {
+            name: 'Office',
+            data: [66.3, 80.6, 84.4, 91.1, 97.8]
+        },
+        {
+            name: 'Non-Office',
+            data: [45.6, 57.7, 63.4, 77.8, 94.8]
+        },
+    ]
+});
 
+    </script>
+</body>
+</html>
