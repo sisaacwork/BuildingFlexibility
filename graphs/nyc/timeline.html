@@ -1,178 +1,72 @@
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<script>
-  Highcharts.chart('container', {
-    chart: {
-        type: 'area'
-    },
-    title: {
-        text: 'NYC 100m+ Completion Timeline'
-    },
-    subtitle: {
-        text: ''
-    },
-    xAxis: {
-        allowDecimals: false,
-    },
-    yAxis: {
-        title: {
-            text: 'Total number of 100m+ buildings'
-        }
-    },
-    tooltip: {
-        pointFormat: '{series.name} had completed <b>{point.y:,.0f}</b><br/>' +
-            '100m+ buildings'
-    },
-    plotOptions: {
-        area: {
-            pointStart: 1900,
-            marker: {
-                enabled: false,
-                symbol: 'circle',
-                radius: 2,
-                states: {
-                    hover: {
-                        enabled: true
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC 100m+ Completion Timeline</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+    <div id="container" style="width:100%; height:400px;"></div>
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'NYC 100m+ Completion Timeline'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                allowDecimals: false,
+            },
+            yAxis: {
+                title: {
+                    text: 'Total number of 100m+ buildings'
+                }
+            },
+            tooltip: {
+                pointFormat: '{series.name} had completed <b>{point.y:,.0f}</b><br/>' +
+                    '100m+ buildings'
+            },
+            plotOptions: {
+                area: {
+                    pointStart: 1900,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
                     }
                 }
-            }
-        }
-    },
-    legend: {
-    	enabled: false,
-    },
-    series: [{
-        name: 'New York City',
-        data: [3, 
-3, 
-3, 
-4, 
-5, 
-6, 
-6, 
-7, 
-7, 
-8, 
-10, 
-10, 
-13, 
-14, 
-16, 
-17, 
-19, 
-21, 
-21, 
-21, 
-21, 
-24, 
-25, 
-27, 
-31, 
-31, 
-39, 
-55, 
-67, 
-78, 
-98, 
-129, 
-133, 
-136, 
-136, 
-137, 
-138, 
-139, 
-139, 
-139, 
-139, 
-140, 
-140, 
-140, 
-140, 
-140, 
-140, 
-141, 
-141, 
-142, 
-145, 
-145, 
-148, 
-149, 
-150, 
-151, 
-154, 
-159, 
-163, 
-169, 
-172, 
-177, 
-184, 
-193, 
-204, 
-211, 
-217, 
-231, 
-235, 
-250, 
-266, 
-283, 
-301, 
-308, 
-328, 
-354, 
-362, 
-368, 
-373, 
-380, 
-385, 
-392, 
-409, 
-424, 
-432, 
-450, 
-478, 
-501, 
-514, 
-530, 
-544, 
-552, 
-558, 
-562, 
-565, 
-569, 
-573, 
-576, 
-583, 
-592, 
-597, 
-615, 
-622, 
-635, 
-646, 
-651, 
-662, 
-677, 
-696, 
-714, 
-733, 
-739, 
-741, 
-752, 
-763, 
-785, 
-807, 
-831, 
-859, 
-884, 
-893, 
-914, 
-933, 
-942
-        ]
-    }]
-});
-
-</script>
-
-    <div id="container"></div>
+            },
+            legend: {
+                enabled: false
+            },
+            series: [{
+                name: 'New York City',
+                data: [
+                    3, 3, 3, 4, 5, 6, 6, 7, 7, 8, 10, 10, 13, 14, 16, 17, 19, 21, 21, 21, 
+                    21, 24, 25, 27, 31, 31, 39, 55, 67, 78, 98, 129, 133, 136, 136, 
+                    137, 138, 139, 139, 139, 139, 140, 140, 140, 140, 140, 140, 141, 
+                    141, 142, 145, 145, 148, 149, 150, 151, 154, 159, 163, 169, 172, 
+                    177, 184, 193, 204, 211, 217, 231, 235, 250, 266, 283, 301, 308, 
+                    328, 354, 362, 368, 373, 380, 385, 392, 409, 424, 432, 450, 478, 
+                    501, 514, 530, 544, 552, 558, 562, 565, 569, 573, 576, 583, 592, 
+                    597, 615, 622, 635, 646, 651, 662, 677, 696, 714, 733, 739, 741, 
+                    752, 763, 785, 807, 831, 859, 884, 893, 914, 933, 942
+                ]
+            }]
+        });
+    </script>
+</body>
+</html>
